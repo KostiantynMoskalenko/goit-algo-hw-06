@@ -1,0 +1,5 @@
+За алгоритмами BFS і DFS ми отримали наступні шляхи:
+Алгоритм BFS відносно ноди "Mescheryakova": Mescheryakova Babych_S Moskalenko Ilina Ryabtsev Babych_R Didkovsky Fenoga Schedrovitsky Krasnovska 
+Алгоритм DFS відносно ноди "Mescheryakova": Mescheryakova Babych_S Babych_R Ryabtsev Didkovsky Krasnovska Schedrovitsky Fenoga Moskalenko Ilina 
+Цілком логічно, що вони не співпадають, бо перший алгоритм - BFS -  працює "в ширину", тож і послідовність обходу графа в нього така, що, починаючи з вузла "Mescheryakova" він спочатку бере найближчи до нього вузли "Babych_S", "Moskalenko", "Ilina" і "Ryabtsev", потім вузли наступної відстані "Babych_R", "Didkovsky" і "Fenoga". А вже потім - найдальші вузли "Schedrovitsky" і "Krasnovska".
+Другий алгоритм - BFS - працює "в глибину", тож він іде по кожній гілці до кінця, а лише потім береться за іншу гілку. В нашому випадку він проходить по гілці Babych_S - Babych_R - Ryabtsev - Didkovsky - Krasnovska, потім там же до Schedrovitsky. Потім він знаходить шлях до неохопленої ще Fenoga. І лише потім - до сусідніх Moskalenko та Ilina.
